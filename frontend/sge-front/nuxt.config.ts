@@ -20,7 +20,7 @@ export default defineNuxtConfig({
     '~/assets/style/global-variables.sass', //css global customizado para toda a aplicação
   ],
   auth: {
-    baseURL: 'http://localhost:8000',
+    baseURL: process.env.BACKEND_URL,
     provider: {
       type: 'local', // local vai manter o token até acontecer o logout, assim como o Webtoken
       // type: 'refresh', // refresh vai atualiar o token de acesso, assim como o JWT
